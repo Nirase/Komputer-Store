@@ -1,0 +1,130 @@
+
+
+
+#bank #balancetext {
+    float:left;
+}
+html, body {
+    margin:0;
+    padding:0;
+    height:100%;
+    width:100%;
+}
+
+#bank #balance {
+    float:right;
+}
+
+#bank button {
+    width: 30%;
+    height: 15%;
+    justify-content: flex-end;
+}
+header {
+    background-color: #373737;
+    position:relative;
+    margin:0;
+    padding:0;
+    height:15%;
+    min-height: 60px;
+    max-height: 80px;
+    position:relative;
+}
+
+header h1 {
+    margin: 0;
+    padding: 0;
+    position:relative;
+    top: 30%;
+    color: white;
+    padding-left: 1%;
+}
+#bank h2{
+    text-align: center;
+}
+
+#work h2{
+    text-align:center;
+}
+
+#workboxes {
+    height: 30%;
+    width:80%;
+    margin: 0 auto;
+    margin-top: 2%;
+    display:flex;
+    min-width: 900px;
+    min-height: 290px;
+
+    justify-content: center;
+    justify-content: space-evenly;
+}
+
+#bank {
+    border: 1px solid black;
+    padding: 5px;
+    width: 20%;
+    height: 100%;
+    min-width: 250px;
+    border-radius: 15%;
+    float: left;
+    background-color: #fbfbfb;
+    display:flex;
+    flex-direction: column;
+    justify-content:flex-end;
+}
+
+#work {
+    border: 1px solid black;
+    padding: 5px;
+    width: 20%;
+    overflow: hidden;
+    border-radius: 15%;
+    float:left;
+    height: 100%;
+    min-width: 250px;
+    background-color: #fbfbfb;
+}
+
+#computers {
+    border: 1px solid black;
+    padding: 5px;
+    width: 20%;
+    
+    min-width: 250px;
+    border-radius: 15%;
+    overflow: hidden;
+    height: 100%;
+    background-color: #fbfbfb;
+}
+
+#computer {
+    border: 1px solid black;
+    padding: 5px;
+    width: 70%;
+    min-width:1000px;
+    margin: 0 auto;
+    margin-top: 2%;
+    overflow: hidden;
+    height: 45%;
+    min-height: 400px;
+}
+
+#computer img {
+    float:left;
+    margin: 3%;
+}
+
+#computer h2 {
+    font-size: 55px;
+}
+
+#computer #computerprice {
+    float:right;
+}
+
+#computer #buy {
+    float:right;
+    width: 15%;
+    height: 40px;
+}

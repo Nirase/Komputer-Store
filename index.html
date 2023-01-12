@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"></link>
+    <title>Komputer Store</title>
+</head>
+<body>
+    <header>
+        <h1>Komputer Store</h1>
+    </header>
+    <div class="WorkBoxes" id="workboxes">
+
+        <div class="Bank" id="bank">
+            <h2>Joe Banker</h2>
+            <p id="balancetext">Balance</p>
+            <p id="balance">0</p>
+            <button onClick="loan()">Get a loan</button>
+        </div>
+    
+        <div class="Work" id="work">
+            <h2>Work</h2>
+            <p>Pay</p>
+            <p id="pay">0</p>
+            <button onClick="bank()">Bank</button>
+            <button onClick="work()">Work</button>
+        </div>
+        
+        <div class="Computers" id="computers">
+            <h2>Laptops</h2>
+            <label for="laptops">Choose a laptop:</label>
+    
+            <select class="laptops" id="laptops" onChange="updateComputer(this.value)">
+            </select>
+    
+            <p>Features:</p>
+            <p id="features"></p>
+        </div>
+
+    </div>
+    
+
+    <div class="Computer" id="computer">
+        <img id="computerImage">
+        <h2 id="computertitle">Temp</h2>
+        <p id="computerdescription">temp</p>
+        <p id="computerprice">0</p>
+        <button id="buy" onClick="buy()">Buy Now!</button>
+
+    </div>
+    <script src="app.js""></script>
+</body>
+</html>
