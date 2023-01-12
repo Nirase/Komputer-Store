@@ -160,5 +160,5 @@ function loan()
             document.getElementById("payLoan").remove();
     };
 
-    document.getElementById("Work").append(loanButton);
+    document.getElementById("workButtons").append(loanButton);
 }
