@@ -1,4 +1,6 @@
-
+/**
+ * @returns Returns the fetch'd data from an API. 
+ */
 async function getComputers() 
 {
     try
@@ -13,6 +15,4 @@ async function getComputers()
     }
 }
 
-let data = await getComputers();
-export {data};
-export default data;
+export default getComputers;
