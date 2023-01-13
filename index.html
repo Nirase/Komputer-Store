@@ -4,54 +4,100 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"></link>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Komputer Store</title>
 </head>
 <body>
-    <header>
+    <header class="container-fluid bg-dark text-white">
         <h1>Komputer Store</h1>
     </header>
-    <div class="WorkBoxes" id="workboxes">
 
-        <div class="Bank" id="bank">
-            <h2>Joe Banker</h2>
-            <p id="balancetext">Balance</p>
-            <p id="balance">0</p>
-            <button onClick="loan()">Get a loan</button>
-        </div>
-    
-        <div class="Work" id="work">
-            <h2>Work</h2>
-            <p>Pay</p>
-            <p id="pay">0</p>
-            <div class="workButtons" id="workButtons">
-                <button onClick="bank()">Bank</button>
-                <button onClick="work()">Work</button>
+    <div class="container">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="card h-100 text-dark bg-light">
+            <div class="card-header bg-light text-center text-dark"><h4>Bank</h4></div>
+              <div class="card-body">
+                <div class="row align-items-end">
+                    <div class="col">
+                        <p class="card-text text-left">Balance: </p>
+                    </div>
+                    <div class="col">
+                        <p id="balance" class="card-text text-right">0,00 kr</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <p class="col">Loan</p>
+                    <p class="col" id="loanedMoney">0,00 kr</p>
+                </div>
+              </div>
+              <div class="card-footer border-0 bg-light text-center">
+              <button id="getLoanButton" type="button" class="col-5 btn btn-primary mt-auto">Get a loan</button>
+              </div>
             </div>
-        </div>
-        
-        <div class="Computers" id="computers">
-            <h2>Laptops</h2>
-            <label for="laptops">Choose a laptop:</label>
+          </div>
+          <div class="col-sm-4">
+            <div class="card h-100 text-dark bg-light">
+            <div class="card-header bg-light text-center text-dark"><h4>Work</h4></div>
+              <div class="card-body">
+                <div class="row align-items-end">
+                    <div class="col">
+                        <p class="card-text text-left">Pay: </p>
+                    </div>
+                    <div class="col">
+                        <p id="pay" class="card-text text-right">0,00 kr</p>
+                    </div>
+                </div>
+              </div>
+              <div class="card-footer border-0 bg-light text-center">
+            <button id="bankButton" class="col-3 btn btn-secondary">Bank</button>
+            <button id="workButton" class="col-3 btn btn-warning">Work</button>
+            <button id="payLoanButton" class="col-3 align-items-end btn btn-primary d-none">Pay loan</button>
+          </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card h-100 text-dark bg-light">
+            <div class="card-header bg-light text-center text-dark"><h4>Computers</h4></div>
+              <div class="card-body">
+                <label for="laptops">Choose a laptop:</label>
     
-            <select class="laptops" id="laptops" onChange="updateComputer(this.value)">
-            </select>
+                <select class="laptops" id="laptops">
+                </select>
     
-            <p>Features:</p>
-            <p id="features"></p>
-        </div>
+                <h6>Features:</h6>
+                <p id="features"></p>
+              </div>
+              </div>
+            </div>
+          </div>
+         
+          
+    </div>
+    </div>
 
+   
+    
+    <div class="container mt-3">
+        <div class="row bg-dark text-light" id="computer">
+            <div class="col">
+                <img class="img-fluid max-width:100%"id="computerImage">
+            </div>
+            <div class="col">
+                <h2 id="computertitle">Temp</h2>
+                <p id="computerdescription">temp</p>
+            </div>
+
+            <div class="col">
+                <p id="computerprice">0,00 kr</p>
+                <button id="buyButton">Buy Now!</button>
+            </div>
+            
+        </div>
     </div>
     
-
-    <div class="Computer" id="computer">
-        <img id="computerImage">
-        <h2 id="computertitle">Temp</h2>
-        <p id="computerdescription">temp</p>
-        <p id="computerprice">0</p>
-        <button id="buy" onClick="buy()">Buy Now!</button>
-
-    </div>
-    <script src="app.js""></script>
+    <script src="app.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </body>
 </html>
