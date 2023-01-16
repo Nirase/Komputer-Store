@@ -1,5 +1,5 @@
 # Komputer-Store
-<img align="left" src="https://i.imgur.com/uRZNA5Q.png">
+<img align="left" width=50 src="https://i.imgur.com/uRZNA5Q.png">
 Komputer store is a website that allows the user to work, take loans and buy computers. The website is designed using Bootstrap and developed with HTML and Javascript. 
 
 ## Written using
