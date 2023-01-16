@@ -7,6 +7,9 @@ Komputer store is a website that allows the user to work, take loans and buy com
 <br/>
 <br/>
 <br/>
+<br/>
+<br/>
+
 ## Written using
 [Visual Studio Code](https://code.visualstudio.com/)
 
