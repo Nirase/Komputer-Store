@@ -61,13 +61,13 @@
             <div class="card h-100 text-dark bg-light">
             <div class="card-header bg-light text-center text-dark"><h4>Computers</h4></div>
               <div class="card-body">
-                <label for="laptops">Choose a laptop:</label>
+                <label for="computerSelect">Choose a computer:</label>
     
-                <select class="laptops" id="laptops">
+                <select class="form-select computerSelect" id="computerSelect">
                 </select>
     
                 <h6>Features:</h6>
-                <p id="features"></p>
+                <p id="computerFeatures"></p>
               </div>
               </div>
             </div>
@@ -81,17 +81,17 @@
     
     <div class="container mt-3">
         <div class="row bg-dark text-light" id="computer">
-            <div class="col">
-                <img class="img-fluid max-width:100%"id="computerImage">
+            <div class="col-sm-4 mt-5 mb-5 ms-5">
+                <img class="img-fluid" id="computerImage">
             </div>
-            <div class="col">
-                <h2 id="computertitle">Temp</h2>
-                <p id="computerdescription">temp</p>
+            <div class="col mt-5">
+                <h2 id="computerTitle">Temp</h2>
+                <p id="computerDescription">temp</p>
             </div>
 
-            <div class="col">
-                <p id="computerprice">0,00 kr</p>
-                <button id="buyButton">Buy Now!</button>
+            <div class="col text-center mt-5">
+                <h1 id="computerPrice">0,00 kr</h1>
+                <button class="btn ps-5 pe-5 pt-2 pd-2 btn-info mt-5" id="buyButton">Buy Now!</button>
             </div>
             
         </div>
