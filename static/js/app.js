@@ -24,39 +24,55 @@ workButton.addEventListener("click", () => {
     payElement.innerText = numberFormatter.format(workView.getPay());
 });
 
-bankButton.addEventListener("click", () => {
+/**
+ * Inserts pay into bank balance.
+ */
+const deposit = () =>
+{
     bank.deposit(workView.withdrawPay());
     payElement.innerText = numberFormatter.format(0);
     balanceElement.innerText = numberFormatter.format(bank.getBalance());
     loanElement.innerText = numberFormatter.format(bank.getLoan()); 
     if(bank.getLoan() === 0)
         payLoanButton.classList.add("d-none");
-});
+}
 
+bankButton.addEventListener("click", deposit);
 
 buyButton.addEventListener("click", () => {
     bank.withdraw(Number(computers[currentComputer].price));
     balanceElement.innerText = numberFormatter.format(bank.getBalance());
 });
 
-getLoanButton.addEventListener("click", () => {
+
+/**
+ * Takes a loan, up to 2x the balance amount
+ */
+const getLoan = () => {
     if(bank.takeALoan(Number(prompt("Please enter how much you want to loan: ", 0))))
     {
         balanceElement.innerText = numberFormatter.format(bank.getBalance());
         loanElement.innerText = numberFormatter.format(bank.getLoan());
         payLoanButton.classList.remove("d-none");
     }
-});
+}
 
-payLoanButton.addEventListener("click", () => {
+getLoanButton.addEventListener("click", () => getLoan);
+
+/**
+ * Uses pay to directly pay off loan.
+ */
+const payLoan = () => 
+{
     bank.payLoan(workView.withdrawPay());
     balanceElement.innerText = numberFormatter.format(bank.getBalance());
     payElement.innerText = numberFormatter.format(0);
     loanElement.innerText = numberFormatter.format(bank.getLoan());
     if(bank.getLoan() === 0)
         payLoanButton.classList.add("d-none");
+}
 
-});
+payLoanButton.addEventListener("click", payLoan);
 
 computerSelect.addEventListener("change", (event) => computersView.updateComputer(event.target.value, numberFormatter));
 computersView.initializeComputers(computers, computerSelect);
