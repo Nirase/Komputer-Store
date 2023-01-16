@@ -1,9 +1,9 @@
-import getComputers from './modules/getComputers.js';
-import bank from './modules/bank.js';
-import workView from './modules/work.js';
-import computersView from './modules/computersView.js';
+import fetchComputers from './api/fetchComputers.js';
+import bank from './bank/bank.js';
+import workView from './work/work.js';
+import computersView from './computers/computersView.js';
 
-let computers = await getComputers();
+let computers = await fetchComputers();
 let currentComputer = 0
 let numberFormatter = new Intl.NumberFormat('se-SE', {style: 'currency', currency: 'SEK'});
 
