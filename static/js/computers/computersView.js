@@ -1,3 +1,4 @@
+import validateImage from "../api/validateImage.js";
 let allComputers = []
 let currentComputer = []
 
@@ -49,13 +50,25 @@ const updateComputer = (index, numberFormatter) =>
         features += currentComputer.specs[i] + "<br>";
     }
 
+
     computerInformationElements.features.innerHTML = features;
     computerInformationElements.price.innerText = numberFormatter.format(currentComputer.price);
     computerInformationElements.description.innerText = currentComputer.description;
     computerInformationElements.title.innerText = currentComputer.title;
-    computerInformationElements.image.src = "https://hickory-quilled-actress.glitch.me/" + currentComputer.image;
+    fetch("https://hickory-quilled-actress.glitch.me/" + currentComputer.image, { method: 'HEAD' })
+    .then(res => {
+        if (res.ok) {
+            computerInformationElements.image.src = "https://hickory-quilled-actress.glitch.me/" + currentComputer.image;
+        } else {
+            computerInformationElements.image.src = "https://via.placeholder.com/300"
+        }
+    })
+    .catch(err => console.log('Error:', err))
+
     computerInformationElements.image.alt = currentComputer.title;
 }
+
+
 
 const computersView = {
     getCurrentComputer,
