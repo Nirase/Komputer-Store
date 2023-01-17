@@ -43,6 +43,11 @@ const withdraw = (withdrawal) => {
  * @returns Returns true if a loan could be taken, false if it could not
  */
 const takeALoan = (loanAmount) => {
+    if(isNaN(loanAmount))
+    {
+        window.confirm("Please enter a number");
+        return false;   
+    }
     if(loan > 0)
     {
         window.confirm("Please pay off your outstanding loan first");
