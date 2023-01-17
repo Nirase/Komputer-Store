@@ -50,7 +50,6 @@ const updateComputer = (index, numberFormatter) =>
         features += currentComputer.specs[i] + "<br>";
     }
 
-
     computerInformationElements.features.innerHTML = features;
     computerInformationElements.price.innerText = numberFormatter.format(currentComputer.price);
     computerInformationElements.description.innerText = currentComputer.description;

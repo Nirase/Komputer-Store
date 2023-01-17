@@ -19,6 +19,9 @@ let buyButton = document.getElementById("buyButton")
 
 let computerSelect = document.getElementById("computerSelect")
 
+/**
+ * Adds salary to pay and updates the pay element
+ */
 workButton.addEventListener("click", () => {
     workView.work();
     payElement.innerText = numberFormatter.format(workView.getPay());
@@ -39,6 +42,9 @@ const deposit = () =>
 
 bankButton.addEventListener("click", deposit);
 
+/**
+ * Withdraws computer price from balance and then updates the balance.
+ */
 buyButton.addEventListener("click", () => {
     bank.withdraw(Number(computers[currentComputer].price));
     balanceElement.innerText = numberFormatter.format(bank.getBalance());
@@ -49,6 +55,7 @@ buyButton.addEventListener("click", () => {
  * Takes a loan, up to 2x the balance amount
  */
 const getLoan = () => {
+    console.log("Hello?");
     if(bank.takeALoan(Number(prompt("Please enter how much you want to loan: ", 0))))
     {
         balanceElement.innerText = numberFormatter.format(bank.getBalance());
@@ -57,7 +64,7 @@ const getLoan = () => {
     }
 }
 
-getLoanButton.addEventListener("click", () => getLoan);
+getLoanButton.addEventListener("click", getLoan);
 
 /**
  * Uses pay to directly pay off loan.
